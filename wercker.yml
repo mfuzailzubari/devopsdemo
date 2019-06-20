@@ -1,0 +1,21 @@
+# The container definition we want to use for developing our app
+box:
+  id: php
+  ports:
+    - "8080"
+
+build:
+  steps:
+    - install-packages:
+        packages: git
+    - internal/watch:
+        code: php -S localhost:8080
+        reload: true
+
+deploy-dev:
+  steps:
+    - heroku-deploy:
+        key: $HEROKU_KEY
+        key-name: DEPLOY_KEY
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
