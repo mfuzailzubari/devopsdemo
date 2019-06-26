@@ -3,7 +3,8 @@
 	$errors = "";
 
 	// connect to database
-	$db = mysqli_connect("localhost", "root", "", "todo");
+	$db  = new PDO('pgsql:host=ec2-54-204-35-248.compute-1.amazonaws.com:5432;dbname=dafi3q6vct9901', 'iukmjijvutphgh', '7583a6a3fac9d484e1a68113c2aefcf8dbbf1f0d64d4c5ad31a4ac94bb2e3667');
+	// $db = mysqli_connect("localhost", "root", "", "todo");
 
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit'])) {
@@ -12,7 +13,8 @@
 		}else{
 			$task = $_POST['task'];
 			$sql = "INSERT INTO tasks (tasks) VALUES ('$task')";
-			mysqli_query($db, $sql);
+			// mysqli_query($db, $sql);
+			$result = $db->query($sql);
 			header('location: index.php');
 		}
 	}	
@@ -46,9 +48,10 @@
 	<tbody>
 		<?php 
 		// select all tasks if page is visited or refreshed
-		$tasks = mysqli_query($db, "SELECT * FROM tasks");
+		// $tasks = mysqli_query($db, "SELECT * FROM tasks");
+		$data = $db->query("SELECT * FROM tasks");
 
-		while($row = mysqli_fetch_array($tasks)) { ?>
+		while($row = $data->fetch(PDO_FETCH_ASSOC)) { ?>
 			<tr>
 				<td> <?php echo $row['id']; ?> </td>
 				<td class="task"> <?php echo $row['tasks']; ?> </td>
