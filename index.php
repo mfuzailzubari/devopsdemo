@@ -23,7 +23,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ToDo List Application</title>
+	<title>Fuzail</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
