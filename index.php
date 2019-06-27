@@ -22,6 +22,16 @@
 			// print_r($result);
 			header('location: index.php');
 		}
+	}
+	if (isset($_GET['del_task'])) {
+		
+		$task = $_GET['del_task'];
+		$sql = 'delete from tasks where id = $task';
+		// mysqli_query($db, $sql);
+		$result = $db->query($sql);
+		// print_r($sql);
+		// print_r($result);
+		header('location: index.php');
 	}	
 	?>
 
