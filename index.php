@@ -58,7 +58,6 @@
 
 		while($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
 			<tr>
-			<? php print_r($row); ?>
 				<td> <?php echo $row['id']; ?> </td>
 				<td class="task"> <?php echo $row['task']; ?> </td>
 				<td class="delete"> 
