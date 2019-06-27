@@ -35,7 +35,7 @@
 	<div class="heading">
 		<h2 style="font-style: 'Hervetica';">ToDo List Application</h2>
 	</div>
-	<form method="post" action="index1.php" class="input_form">
+	<form method="post" action="index.php" class="input_form">
 		<?php if (isset($errors)) { ?>
 			<p><?php echo $errors; ?></p>
 		<?php } ?>
