@@ -38,12 +38,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ToDo List Application</title>
+	<title>ToDo List Application | S&P</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Hervetica';">ToDo List Application</h2>
+		<h2 style="font-style: 'Hervetica';">ToDo List</h2>
 	</div>
 	<form method="post" action="index.php" class="input_form">
 		<?php if (isset($errors)) { ?>
