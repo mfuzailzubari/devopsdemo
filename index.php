@@ -38,7 +38,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ToDo List Application | SNP</title>
+	<title>ToDo List Application</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
