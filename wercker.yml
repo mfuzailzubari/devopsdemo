@@ -8,12 +8,12 @@ build:
   steps:
     - install-packages:
         packages: git
-    - script:
-        name: install composer
-        code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-    - script:
-        name: install dependencies
-        code: composer install --no-interaction
+    # - script:
+    #     name: install composer
+    #     code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    # - script:
+    #     name: install dependencies
+    #     code: composer install --no-interaction
     - internal/watch:
         code: php -S localhost:8080
         reload: true
