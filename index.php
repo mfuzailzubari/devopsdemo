@@ -77,10 +77,11 @@
 		// select all tasks if page is visited or refreshed
 		// $tasks = mysqli_query($db, "SELECT * FROM tasks");
 		$data = $db->query("SELECT * FROM tasks");
-
+		$index = 1;
 		while($row = $data->fetch(PDO::FETCH_ASSOC)) { ?>
 			<tr>
-				<td> <?php echo $row['id']; ?> </td>
+				<!-- <td> <?php // echo $row['id']; ?> </td> -->
+				<td> <?php echo $index; $index++; ?> </td>
 				<td class="task"> <?php echo $row['task']; ?> </td>
 				<td class="delete"> 
 					<a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
