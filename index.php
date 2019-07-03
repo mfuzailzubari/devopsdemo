@@ -2,6 +2,8 @@
 
 <?php 
 
+	include_once('utils.php');
+
     // initialize errors variable
 	$errors = "";
 
@@ -33,17 +35,27 @@
 		// print_r($result);
 		header('location: index.php');
 	}	
+
+	// function getPageTitle()
+	// {
+	// 	return "Todo List Application";
+	// }
+
+	// function getAppTitle()
+	// {
+	// 	return "Todo List";
+	// }
 	?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ToDo List Application | S&P</title>
+	<title><?php echo Utils::getPageTitle(); ?></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Hervetica';">ToDo List</h2>
+		<h2 style="font-style: 'Hervetica';"><?php echo Utils::getAppTitle(); ?></h2>
 	</div>
 	<form method="post" action="index.php" class="input_form">
 		<?php if (isset($errors)) { ?>
