@@ -1,6 +1,6 @@
 <?php
 
-assert(true == false);
 echo 'Hi!';
+return assert(true == false);
 
 ?>
