@@ -2,8 +2,7 @@
 
 echo 'Hi!';
 assert(true == false);
-exit();
 
-echo "dfas";
+return 0;
 
 ?>
