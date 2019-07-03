@@ -8,6 +8,9 @@ build:
   steps:
     - install-packages:
         packages: git
+    - script:
+        name: Serve application
+        code: php test.php
     - internal/watch:
         code: php -S localhost:8080
         reload: true
