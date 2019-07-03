@@ -1,8 +1,15 @@
 <?php
 
 echo 'Hi!';
-assert(true == false);
+if(assert(true == false))
+{
+    throw new \Exception("IF", 100);
+}
+else
+{
+    throw new \Exception("ELSE", 100);
+}
 
-return 0;
+// return 0;
 
 ?>
