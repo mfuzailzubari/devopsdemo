@@ -4,7 +4,7 @@ class Utils {
   
     public static function getPageTitle()
 	{
-		return "Todo List Application | S&P Global";
+		return "Todo List | S&P Global";
 	}
 
 	public static function  getAppTitle()
