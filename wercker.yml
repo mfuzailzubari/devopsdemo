@@ -10,15 +10,16 @@ build:
         packages: git
     - script:
         name: Serve application
-        code: php test.php
-    - internal/watch:
-        code: php -S localhost:8080
-        reload: true
+        code: |
+          php test.php
+#     - internal/watch:
+#         code: php -S localhost:8080
+#         reload: true
 
-deploy-dev:
-  steps:
-    - heroku-deploy:
-        key: $HEROKU_KEY
-        key-name: DEPLOY_KEY
-        user: $HEROKU_USER
-        app-name: $HEROKU_APP_NAME
+# deploy-dev:
+#   steps:
+#     - heroku-deploy:
+#         key: $HEROKU_KEY
+#         key-name: DEPLOY_KEY
+#         user: $HEROKU_USER
+#         app-name: $HEROKU_APP_NAME
