@@ -1,8 +1,11 @@
 <?php
 
 require_once('utils.php');
+assert_options(ASSERT_WARNING, 0);
 
-echo 'Test Runs Started';
+echo '===========================================================================================' . PHP_EOL;
+echo 'Test Runs Started' . PHP_EOL;
+echo '===========================================================================================' . PHP_EOL;
 if(!assert(Utils::getPageTitle() == "Todo List Application"))
 {
     echo "Test run failed";
