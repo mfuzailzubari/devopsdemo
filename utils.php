@@ -9,7 +9,7 @@ class Utils {
 
 	public static function  getAppTitle()
 	{
-		return "Todo List";
+		return "Todo List App";
 	}
 }
 
