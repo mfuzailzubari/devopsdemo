@@ -61,7 +61,7 @@
 		<?php if (isset($errors)) { ?>
 			<p><?php echo $errors; ?></p>
 		<?php } ?>
-		<input type="text" name="task" class="task_input">
+		<input type="text"  autocomplete="false" name="task" class="task_input">
 		<button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
 	</form>
 	<table>
