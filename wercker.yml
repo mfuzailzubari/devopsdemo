@@ -20,7 +20,7 @@ dev:
   steps:
     - heroku-deploy:
         key: $HEROKU_KEY
-        key-name: DEV
+        key-name: $DEV
         user: $HEROKU_USER
         app-name: $HEROKU_APP_NAME
 
@@ -28,6 +28,6 @@ prod:
   steps:
     - heroku-deploy:
         key: $HEROKU_KEY
-        key-name: PROD
+        key-name: $PROD
         user: $HEROKU_USER
         app-name: $HEROKU_APP_NAME
