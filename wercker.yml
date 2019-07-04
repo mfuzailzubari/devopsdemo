@@ -16,7 +16,15 @@ build:
         code: php -S localhost:8080
         reload: true
 
-deploy-dev:
+dev:
+  steps:
+    - heroku-deploy:
+        key: $HEROKU_KEY
+        key-name: DEPLOY_KEY
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
+
+prod:
   steps:
     - heroku-deploy:
         key: $HEROKU_KEY
