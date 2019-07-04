@@ -52,6 +52,7 @@
 <head>
 	<title><?php echo Utils::getPageTitle(); ?></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- DEV -->
 </head>
 <body>
 	<div class="heading">
