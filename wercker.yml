@@ -8,14 +8,26 @@ build:
   steps:
     - install-packages:
         packages: git
+    - script:
+        name: Serve application
+        code: |
+          php test.php
     - internal/watch:
         code: php -S localhost:8080
         reload: true
 
-deploy-dev:
+dev:
   steps:
     - heroku-deploy:
         key: $HEROKU_KEY
-        key-name: DEPLOY_KEY
+        key-name: $DEV
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
+
+prod:
+  steps:
+    - heroku-deploy:
+        key: $HEROKU_KEY
+        key-name: $PROD
         user: $HEROKU_USER
         app-name: $HEROKU_APP_NAME
